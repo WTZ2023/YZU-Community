@@ -1,0 +1,419 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#ECECEC"
+    tools:context=".MyHomeActivity">
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/MyHometoolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:menu="@menu/log_top_menu"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        app:theme="@style/ThemeOverlay.AppCompat.Dark" />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!--顶栏-->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_gravity="right"
+                tools:ignore="RtlHardcoded">
+                <ImageButton
+                    android:layout_marginEnd="15dp"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/baseline_message_24"
+                    android:id="@+id/btn_MyHomeMsg"/>
+                <ImageButton
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/baseline_settings_24"
+                    android:id="@+id/btn_MyHomeSetting"/>
+            </LinearLayout>
+
+            <!--头像栏-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <ImageButton
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:layout_marginStart="20dp"
+                    android:id="@+id/btn_MyHomeHeadImag"/>
+
+                <ImageButton
+                    android:id="@+id/btn_MyHomeHeadImag"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:layout_marginStart="20dp"
+                    tools:ignore="DuplicateIds,ImageContrastCheck" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginStart="10dp"
+                    android:layout_toEndOf="@id/btn_MyHomeHeadImag"
+                    android:layout_centerInParent="true"
+                    android:layout_gravity="center_vertical"
+                    android:id="@+id/linearLay_MyHomeHeadWidget">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="一只川普"
+                        android:textSize="20sp"
+                        android:id="@+id/tv_MyHomeUserName"/>
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="123456789"
+                            android:id="@+id/tv_MyHomeUserId"/>
+
+                        <TextView
+                            android:id="@+id/tv_MyHomeUserId"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="123456789"
+                            android:textColor="#616161"
+                            tools:ignore="DuplicateIds" />
+
+                        <ImageButton
+                            android:layout_marginStart="5dp"
+                            android:layout_width="12dp"
+                            android:layout_height="12dp"
+                            android:background="@drawable/baseline_content_copy_24"
+                            android:layout_gravity="center_vertical"
+                            android:id="@+id/btn_copyId"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <ImageButton
+                    android:id="@+id/btn_MyHomeEnterMyInfo"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerInParent="true"
+                    android:layout_gravity="right|center_vertical"
+                    android:layout_marginEnd="20dp"
+                    android:background="@drawable/baseline_arrow_forward_ios_24" />
+            </RelativeLayout>
+
+
+            <!--关注，动态，粉丝-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp">
+                <RelativeLayout
+                    style="@style/myHomeRectBtn"
+                    android:background="@drawable/myhome_rect_btn"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginStart="10dp"
+                    android:backgroundTint="#DECDCD">
+
+                    <TextView
+                        style="@style/myHomeRectTv"
+                        android:text="关注"/>
+
+
+                    <TextView
+                        style="@style/myHomeRectTv"
+                        android:text="关注"
+                        android:textColor="#6D4C41" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:layout_centerInParent="true"
+                        android:text="999"
+                        android:textSize="20sp"/>
+                </RelativeLayout>
+                <RelativeLayout
+                    style="@style/myHomeRectBtn"
+                    android:background="@drawable/myhome_rect_btn"
+                    android:backgroundTint="#E2E5C4"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginStart="5dp">
+                    <TextView
+                        style="@style/myHomeRectTv"
+                        android:text="动态"/>
+
+                    <TextView
+                        style="@style/myHomeRectTv"
+                        android:text="动态"
+                        android:textColor="#616161" />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:gravity="center"
+                        android:text="999"
+                        android:textSize="20sp" />
+                </RelativeLayout>
+                <RelativeLayout
+                    style="@style/myHomeRectBtn"
+                    android:background="@drawable/myhome_rect_btn"
+                    android:backgroundTint="#CFE0EE"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginStart="5dp">
+                    <TextView
+                        style="@style/myHomeRectTv"
+                        android:text="粉丝"/>
+
+
+                    <TextView
+                        style="@style/myHomeRectTv"
+                        android:text="粉丝"
+                        android:textColor="#616161" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:gravity="center"
+                        android:text="999"
+                        android:textSize="20sp" />
+                </RelativeLayout>
+
+            </LinearLayout>
+            <!--功能区-->
+            <com.example.yzu_community.RoundedCornerLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:padding="5dp">
+                <GridLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:rowCount="2"
+                    android:columnCount="3">
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="50dp"
+                        android:layout_columnWeight="1"
+                        android:orientation="horizontal"
+                        android:background="@drawable/myhome_rect_btn"
+                        android:backgroundTint="#64AF4B"
+                        android:gravity="center"
+                        android:layout_margin="5dp">
+                        <ImageView
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:layout_marginEnd="5dp"
+                            android:src="@color/material_dynamic_neutral_variant80" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="#EDEDED"
+                            android:text="我的关注"/>
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="我的关注"
+                            android:textColor="#311B92" />
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="50dp"
+                        android:layout_columnWeight="1"
+                        android:layout_rowWeight="1"
+                        android:orientation="horizontal"
+                        android:background="@drawable/myhome_rect_btn"
+                        android:backgroundTint="#F37897"
+                        android:gravity="center"
+                        android:layout_margin="5dp">
+                        <ImageView
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:layout_marginEnd="5dp"
+                            android:src="@color/material_dynamic_neutral_variant80" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="#EDEDED"
+                            android:text="我的收藏"/>
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="我的收藏"
+                            android:textColor="#311B92" />
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="50dp"
+                        android:layout_columnWeight="1"
+                        android:layout_rowWeight="1"
+                        android:orientation="horizontal"
+                        android:background="@drawable/myhome_rect_btn"
+                        android:backgroundTint="#52A6FF"
+                        android:gravity="center"
+                        android:layout_margin="5dp"
+                        tools:ignore="ExtraText">
+                        <ImageView
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:layout_marginEnd="5dp"
+                            android:src="@color/material_dynamic_neutral_variant80" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="#EDEDED"
+                            android:text="我的帖子"/>
+=======
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="我的帖子"
+                            android:textColor="#4A148C" />
+>>>>>>> bedecae (第一次整合)
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="50dp"
+                        android:layout_columnWeight="1"
+                        android:layout_rowWeight="1"
+                        android:orientation="horizontal"
+                        android:background="@drawable/myhome_rect_btn"
+                        android:backgroundTint="#9AA116"
+                        android:gravity="center"
+                        android:layout_margin="5dp">
+                        <ImageView
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:layout_marginEnd="5dp"
+                            android:src="@color/material_dynamic_neutral_variant80" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="#EDEDED"
+                            android:text="浏览记录"/>
+=======
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="浏览记录"
+                            android:textColor="#263238" />
+>>>>>>> bedecae (第一次整合)
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="50dp"
+                        android:layout_columnWeight="1"
+                        android:layout_rowWeight="1"
+                        android:orientation="horizontal"
+                        android:background="@drawable/myhome_rect_btn"
+                        android:backgroundTint="#EA731F"
+                        android:gravity="center"
+                        android:layout_margin="5dp">
+                        <ImageView
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:layout_marginEnd="5dp"
+                            android:src="@color/material_dynamic_neutral_variant80" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="#EDEDED"
+                            android:text="草稿箱    "/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="草稿箱    "
+                            android:textColor="#3E2723" />
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="50dp"
+                        android:layout_columnWeight="1"
+                        android:layout_rowWeight="1"
+                        android:orientation="horizontal"
+                        android:background="@drawable/myhome_rect_btn"
+                        android:backgroundTint="#7A61E5"
+                        android:gravity="center"
+                        android:layout_margin="5dp">
+                        <ImageView
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:layout_marginEnd="5dp"
+                            android:src="@color/material_dynamic_neutral_variant80" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="#EDEDED"
+                            android:text="占位占位"/>
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="占位占位"
+                            android:textColor="#000000" />
+
+                    </LinearLayout>
+                </GridLayout>
+            </com.example.yzu_community.RoundedCornerLayout>
+
+            <com.example.yzu_community.RoundedCornerLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:id="@+id/myHomeTemp"
+                android:layout_margin="10dp">
+
+                <ListView
+                    android:id="@+id/lv_myHomeFunc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    tools:ignore="NestedScrolling" />
+
+
+            </com.example.yzu_community.RoundedCornerLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+</LinearLayout>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+    <ImageView
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:id="@+id/topic_head"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:scaleType="centerCrop">
+
+    </ImageView>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_marginTop="10dp"
+                android:id="@+id/topic_tittle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:textStyle="bold">
+            </TextView>
+            <TextView
+                android:id="@+id/topic_introduce"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="15sp"
+                android:text="@string/topic_introduce">
+            </TextView>
+            <Button
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:id="@+id/topic_star"
+                android:text="收藏">
+
+            </Button>
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <include
+        layout="@layout/list_cardview">
+
+    </include>
+
+</LinearLayout>

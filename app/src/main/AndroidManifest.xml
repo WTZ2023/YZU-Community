@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:name="android.permission.INTERNET">
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="学海论剑"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.YZU_Community"
+        tools:targetApi="31">
+        <activity
+            android:name=".LoginActivity"
+            android:exported="true"
+            android:label="学海论剑"
+            android:screenOrientation="portrait">
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+        </activity>
+
+        <activity
+            android:name=".HuoDongDetailsActivity"
+            android:exported="false"
+            android:label="活动详情"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name=".TopicActivity"
+            android:exported="false"
+            android:label="话题详情"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".CreateNewTopicActivity"
+            android:exported="false"
+            android:label="创建一个新话题"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".CreateNewLogActivity"
+            android:exported="false"
+            android:label="创建一条新动态"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".MyHomeActivity"
+            android:exported="false"
+            android:label="我的"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".LogActivity"
+            android:exported="false"
+            android:label="动态详情"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:screenOrientation="portrait">
+
+        </activity>
+    </application>
+
+</manifest>

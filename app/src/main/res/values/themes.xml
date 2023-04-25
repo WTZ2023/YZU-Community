@@ -1,0 +1,32 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.YZU_Community" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">#003CE1</item>
+        <item name="colorPrimaryVariant">#3063DB</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">#02AFFF</item>
+        <item name="colorSecondaryVariant">#02AFFF</item>
+        <item name="colorOnSecondary">@color/white</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
+        <!-- Customize your theme here. -->
+        <item name="colorControlNormal">@android:color/white</item>
+    </style>
+
+    <style name="myHomeRectBtn">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">50dp</item>
+        <item name="android:layout_weight">1</item>
+    </style>
+
+    <style name="myHomeRectTv">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_alignParentStart">true</item>
+        <item name="android:layout_alignParentTop">true</item>
+        <item name="android:layout_marginStart">8dp</item>
+        <item name="android:layout_marginTop">5dp</item>
+    </style>
+</resources>

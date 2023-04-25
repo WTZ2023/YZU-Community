@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_gravity="bottom"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <Button
+                    android:layout_width="120dp"
+                    android:layout_height="70dp"
+                    android:layout_margin="5dp"
+                    android:text="二手教材"></Button>
+
+                <Button
+                    android:layout_width="120dp"
+                    android:layout_height="match_parent"
+                    android:layout_margin="5dp"
+                    android:text="体育器材"></Button>
+
+                <Button
+                    android:layout_width="120dp"
+                    android:layout_height="match_parent"
+                    android:layout_margin="5dp"
+                    android:text="生活用品"></Button>
+            </LinearLayout>
+
+            <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:orientation="horizontal"
+            android:gravity="center">
+            <Button
+                android:layout_width="120dp"
+                android:layout_height="70dp"
+                android:layout_margin="5dp"
+                android:text="出行工具">
+            </Button>
+            <Button
+                android:layout_width="120dp"
+                android:layout_height="match_parent"
+                android:layout_margin="5dp"
+                android:text="电子产品">
+            </Button>
+            <Button
+                android:layout_width="120dp"
+                android:layout_height="match_parent"
+                android:layout_margin="5dp"
+                android:text="文化娱乐">
+            </Button>
+        </LinearLayout>
+        </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+    <fragment
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/fragment_deal_list"
+        android:name="com.example.yzu_community.FragDealList"
+        android:layout_weight="1">
+
+    </fragment>
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">YZU_Community</string>
+    =======
+    <string name="title_activity_log">LogActivity</string>
+    <string name="title_activity_add">AddActivity</string>
+    <!-- Strings used for fragments for navigation -->
+
+    <!--动态详情的文本内容-->
+    <string name="log_tittle">标题测试</string>
+    <string name="log_author">张小米</string>
+    <string name="log_date">2023年1月1日</string>
+    <string name="log">测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试
+        测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试
+        测试测试测试</string>
+
+    <!--话题详情的文本内容-->
+    <string name="topic_tittle">薅羊毛小分队</string>
+    <string name="topic_introduce">史低价，免费领，和大家分享吧！
+            羊毛虽好， 可不要被反薅哦！</string>
+
+    <!--列表卡片的文本内容-->
+    <string name="card_tittle">卡片标题测试</string>
+    <string name="card_author">张小米</string>
+    <string name="card_date">2023年1月1日</string>
+
+
+    >>>>>>> bedecae (第一次整合)
+</resources>
